@@ -59,11 +59,29 @@ potential_temp <- function(Temp,
 
 ## Details
 
-It is important that the function is saved within the same folder or directory of the main script where you wish to call the function. To use the Matlab and R versions of equivalent potential temperature script, you must also save the five additional scripts included in the directory for the environment in which you are analyzing the data. The necessary functions for the equivalent potential temperature are: potential_temp.m(R), saturation_vapor_pressure.m(R), water_vapor_RH.m(R), mixing_ratio.m(R), and LCL_temp_RH.m(R) and in addition to equiv_potential_temp.m need to be stored where the main script is saved. Provided below are brief descriptions of all scripts provided in this directory. 
+It is important that the function is saved within the same folder or directory of the main script where you wish to call the function. To use the Matlab and R versions of equivalent potential temperature script, you must also save the five additional scripts included in the directory for the environment in which you are analyzing the data. 
+
+### Matlab
+
+The necessary functions for the equivalent potential temperature for use in Matlab Enviornment: 
+* potential_temp.m
+* saturation_vapor_pressure.m
+* water_vapor_RH.m
+* mixing_ratio.m
+* LCL_temp_RH.m
+
+### R
+
+The necessary functions for the equivalent potential temperature for use in R Enviornment: 
+* potential_temp.R
+* saturation_vapor_pressure.R
+* water_vapor_RH.R
+* mixing_ratio.R
+* LCL_temp_RH.R
+
+In addition to equiv_potential_temp.m(R) file, the aformentioned .m or.R scripts need to be stored where the main script that will be calling the function(s) is saved. Provided below are brief descriptions of all functions provided in this directory and used in the calculation of equivalent potential temperature. 
 
 Note: if using Matlab enviornment, only download and save the .m files and if using R environment, only download and use the .R files.  
-
-### Matlab (R)
 
 #### potential_temp.m (potential_temp.R)
 
@@ -76,7 +94,6 @@ This function returns the saturation vapor pressure (es), that is, the vapor pre
 #### water_vapor_RH.m (water_vapor_RH.R)
 
 This function returns the water vapor pressure (e) relative to the temperature of the air. Inputs required are Temperature (in °C) and relative humidity (as a percentage). It can be used as a standalone function for computation of water vapor pressure and it is required for use of equiv_potential_temp.m. When used as standalone, output is given in Pa.
-
 
 #### mixing_ratio.m (mixing_ratio.R)
 
