@@ -49,7 +49,7 @@ Give the example
 
 ## Details
 
-It is important that the function is saved within the same folder or directory of the main script where you wish to call the function. To use the Matlab and R versions of equivalent potential temperature script, you must also save the three additional scripts included in the directory for the environment in which you are analyzing the data. The necessary functions for the equivalent potential temperature are: potential_temp.m, mixing_ratio.m, and LCL_temp_RH.m and in addition to equiv_potential_temp.m need to be stored where the main script is saved. Provided below are brief descriptions of all scripts provided in this directory. 
+It is important that the function is saved within the same folder or directory of the main script where you wish to call the function. To use the Matlab and R versions of equivalent potential temperature script, you must also save the five additional scripts included in the directory for the environment in which you are analyzing the data. The necessary functions for the equivalent potential temperature are: potential_temp.m(R), saturation_vapor_pressure.m(R), water_vapor_RH.m(R), mixing_ratio.m(R), and LCL_temp_RH.m(R) and in addition to equiv_potential_temp.m need to be stored where the main script is saved. Provided below are brief descriptions of all scripts provided in this directory. 
 
 Note: if using Matlab enviornment, only download and save the .m files and if using R environment, only download and use the .R files.  
 
@@ -58,6 +58,10 @@ Note: if using Matlab enviornment, only download and save the .m files and if us
 #### potential_temp.m (potential_temp.R)
 
 This script computes the temperature a parcel of dry air woukd have if brought adiabatically to a standard pressure level of 1000 mb. Inputs are temperature (T), given in °C and pressure (P), given in hPa. It can be used as a standalone function for mixing ratio computation and is required for use of equiv_potential_temp.m. When used as standalone, output is the potential temperature given in Kelvin.
+
+#### saturation_vapor_pressure.m (saturation_vapor_pressure.R)
+
+#### water_vapor_RH.m (water_vapor_RH.R)
 
 #### mixing_ratio.m (mixing_ratio.R)
 
