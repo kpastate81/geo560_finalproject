@@ -57,11 +57,16 @@ Note: if using Matlab enviornment, only download and save the .m files and if us
 
 #### potential_temp.m (potential_temp.R)
 
-This script computes the temperature a parcel of dry air woukd have if brought adiabatically to a standard pressure level of 1000 mb. Inputs are temperature (T), given in °C and pressure (P), given in hPa. It can be used as a standalone function for mixing ratio computation and is required for use of equiv_potential_temp.m. When used as standalone, output is the potential temperature given in Kelvin.
+This function computes the temperature a parcel of dry air woukd have if brought adiabatically to a standard pressure level of 1000 mb. Inputs are temperature (T), given in °C and pressure (P), given in hPa. It can be used as a standalone function for mixing ratio computation and is required for use of equiv_potential_temp.m. When used as standalone, output is the potential temperature given in Kelvin.
 
 #### saturation_vapor_pressure.m (saturation_vapor_pressure.R)
 
+This function returns the saturation vapor pressure (es), that is, the vapor pressure of a system that has attained saturation but not supersaturation. Temperature (in °C) is the only input required. It can be used as a standalone function for saturation vapor pressure computation and it is required for use of equiv_potential_temp.m. When used as standalone, output is given in Pa.
+
 #### water_vapor_RH.m (water_vapor_RH.R)
+
+This function returns the water vapor pressure (e) relative to the temperature of the air. Inputs required are Temperature (in °C) and relative humidity (as a percentage). It can be used as a standalone function for computation of water vapor pressure and it is required for use of equiv_potential_temp.m. When used as standalone, output is given in Pa.
+
 
 #### mixing_ratio.m (mixing_ratio.R)
 
@@ -79,6 +84,8 @@ This function returns the equivalent potential temperature based on Bolton (1980
 
 ### Matlab
 
+Once all .m files are saved in working directory, can call functions from consol or in main script for computations.
+
 ```
 %Variables:
 T = 12.8; %°C
@@ -90,3 +97,18 @@ theta_e = equiv_potential_temp(T,P,RH);
 ```
 
 ### R
+
+Be sure to first run all .R function files so they are loaded within your working enviornment.
+
+<img width="369" alt="image" src="https://user-images.githubusercontent.com/122836096/233811581-b45fd7f5-79aa-4c02-9820-83edee1ad55f.png">
+
+```
+#Variables:
+
+Temp = 12.8 #°C
+P = 1008.2 #hPa
+RH = 83 #%
+
+equiv_potential_temp(Temp,P,RH)
+
+```
