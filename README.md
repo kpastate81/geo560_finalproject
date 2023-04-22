@@ -63,7 +63,7 @@ It is important that the function is saved within the same folder or directory o
 
 ### Matlab
 
-The necessary functions for the equivalent potential temperature for use in Matlab Enviornment: 
+Necessary functions for computing  equivalent potential temperature using the equiv_potential_temp.m script in the Matlab Enviornment: 
 * potential_temp.m
 * saturation_vapor_pressure.m
 * water_vapor_RH.m
@@ -72,7 +72,7 @@ The necessary functions for the equivalent potential temperature for use in Matl
 
 ### R
 
-The necessary functions for the equivalent potential temperature for use in R Enviornment: 
+The necessary functions for computing equivalent potential temperature using the equiv_potential_temp.R script in an R Enviornment: 
 * potential_temp.R
 * saturation_vapor_pressure.R
 * water_vapor_RH.R
