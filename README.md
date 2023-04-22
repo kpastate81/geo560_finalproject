@@ -71,4 +71,18 @@ This function returns the lifting condensation level temperature using RH. Input
 
 This function returns the equivalent potential temperature based on Bolton (1980). The potential_temp.m (potential_temp.R), mixing_ratio.m (mixing_ratio.R), and LCL_temp_RH.m (LCL_temp_RH.R) are required for using this function. The inputs are temperature (T) in °C, Presssure (P) in hPa, and relative humidity (RH) given as a percentage. The output in the temperature (in Kelvin) that a parcel at the specific pressure and temperature provided would have if it were raised to 0 mb and all the water vapor in the parcel were to be condensed, and the parcel was brought to standard sea-level pressure (1000 hPa).
 
+## Configuration
 
+### Matlab
+
+```
+%Variables:
+T = 12.8; %°C
+P = 1008.2; %hPa
+RH = 83; %
+
+theta_e = equiv_potential_temp(T,P,RH);
+
+```
+
+### R
