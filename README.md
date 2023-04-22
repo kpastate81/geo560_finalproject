@@ -57,7 +57,7 @@ Note: if using Matlab enviornment, only download and save the .m files and if us
 
 #### potential_temp.m (potential_temp.R)
 
-This function computes the temperature a parcel of dry air woukd have if brought adiabatically to a standard pressure level of 1000 mb. Inputs are temperature (T), given in °C and pressure (P), given in hPa. It can be used as a standalone function for mixing ratio computation and is required for use of equiv_potential_temp.m. When used as standalone, output is the potential temperature given in Kelvin.
+This function computes the temperature a parcel of dry air woukd have if brought adiabatically to a standard pressure level of 1000 mb. Inputs are temperature (given in °C) and pressure (given in hPa). It can be used as a standalone function for mixing ratio computation and is required for use of equiv_potential_temp.m. When used as standalone, output is the potential temperature given in Kelvin.
 
 #### saturation_vapor_pressure.m (saturation_vapor_pressure.R)
 
@@ -70,15 +70,15 @@ This function returns the water vapor pressure (e) relative to the temperature o
 
 #### mixing_ratio.m (mixing_ratio.R)
 
-This function returns the mixing ratio using water vapor pressure defined as e. It requires inputs of temperature (T), given in °C, relative humidity (RH), given as a percentage, and Pressure (P), given in hPa. It can be used as a standalone function for mixing ratio computation and is required for use of equiv_potential_temp.m. When used as a standalone, ouput is the mixing ratio in g/kg.
+This function returns the mixing ratio using water vapor pressure defined as e. It requires inputs of temperature (given in °C), relative humidity (given as a percentage), and Pressure (given in hPa). It can be used as a standalone function for mixing ratio computation and is required for use of equiv_potential_temp.m. When used as a standalone, ouput is the mixing ratio in g/kg.
 
 #### LCL_temp_RH.m (LCL_temp_RH.R)
 
-This function returns the lifting condensation level temperature using RH. Inputs are temperature (T), given in °C and relative humidity (RH) given as a percentage. It can be used as a standalone function for lifting condensation level temperature and is required for use of equiv_potential_temp.m. When used as a standalone, ouput is the temperature in degree Kelvin. 
+This function returns the lifting condensation level temperature using RH. Inputs are temperature (given in °C) and relative humidity (given as a percentage). It can be used as a standalone function for lifting condensation level temperature and is required for use of equiv_potential_temp.m. When used as a standalone, ouput is the temperature in degree Kelvin. 
 
 #### equiv_potential_temp.m (equiv_potential_temp.R)
 
-This function returns the equivalent potential temperature based on Bolton (1980). The potential_temp.m (potential_temp.R), mixing_ratio.m (mixing_ratio.R), and LCL_temp_RH.m (LCL_temp_RH.R) are required for using this function. The inputs are temperature (T) in °C, Presssure (P) in hPa, and relative humidity (RH) given as a percentage. The output in the temperature (in Kelvin) that a parcel at the specific pressure and temperature provided would have if it were raised to 0 mb and all the water vapor in the parcel were to be condensed, and the parcel was brought to standard sea-level pressure (1000 hPa).
+This function returns the equivalent potential temperature based on Bolton (1980). The potential_temp.m (potential_temp.R), saturation_vapor_pressure.m (saturation_vapor_pressure.R), water_vapor_RH.m (water_vapor_RH.R), mixing_ratio.m (mixing_ratio.R), and LCL_temp_RH.m (LCL_temp_RH.R) are required for using the equiv_potential_temp.m (equiv_potential_temp.R) function. The inputs are temperature (in °C), Presssure (in hPa), and relative humidity (given as a percentage). The output is temperature (in Kelvin) that a parcel at the provided pressure and temperature would have if it were raised to 0 mb and all the water vapor in the parcel were to be condensed, and the parcel was brought to standard sea-level pressure (1000 hPa).
 
 ## Configuration
 
@@ -98,7 +98,7 @@ theta_e = equiv_potential_temp(T,P,RH);
 
 ### R
 
-Be sure to first run all .R function files so they are loaded within your working enviornment.
+Be sure to first run all .R function files so they are loaded within the working enviornment.
 
 <img width="369" alt="image" src="https://user-images.githubusercontent.com/122836096/233811581-b45fd7f5-79aa-4c02-9820-83edee1ad55f.png">
 
